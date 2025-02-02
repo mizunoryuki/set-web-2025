@@ -10,5 +10,5 @@ find . -type f -name "*.webp" | while read INPUT; do
     if [ $(identify -format "%w" "$INPUT") -le 810 ]; then
         continue
     fi
-    cwebp -resize 810 0 "$INPUT" -o "$INPUT"
+    cwebp -resize 1920 0 "$INPUT" -o "$INPUT"
 done
